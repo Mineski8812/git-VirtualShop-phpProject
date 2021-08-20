@@ -1,0 +1,90 @@
+{%extends('base.html.twig')%}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6 ">
+            <!-- BEGIN SAMPLE FORM PORTLET-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i> EFECTUAR COMPRA
+
+                    </div>
+                    <div class="tools">
+                        <a href="" class="collapse" data-original-title="" title="">
+                        </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title="">
+                        </a>
+                        <a href="" class="reload" data-original-title="" title="">
+                        </a>
+                        <a href="" class="remove" data-original-title="" title="">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <form role="form">
+                        {{ form_start(form) }}
+                        <div class="form-body">
+
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Nombre cliente/usuario</label>
+                                        <div class="input-icon right">
+                                            <i class="fa fa-microphone fa-spin"></i>
+                                            <input type="text" class="form-control" placeholder="{{cliente.username}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nombre del producto</label>
+                                        <div class="input-icon right">
+                                            <i class="fa fa-microphone fa-spin"></i>
+                                            <input type="text" class="form-control" placeholder="{{ producto.name }}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="col-md-3">
+                                   <div class="form-group">
+                                       <label>Cantidad existente</label>
+                                       <div class="input-icon right">
+                                           <i class="fa fa-microphone fa-spin"></i>
+                                           <input type="text" class="form-control" placeholder="{{ producto.cant }}" disabled>
+                                       </div>
+                                   </div>
+                               </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        {#<label>Cantidad a comprar</label>#}
+                                        <div class="input-icon right">
+                                            <i class="fa fa-microphone fa-spin"></i>
+
+                                            {{ form_widget(form) }}
+
+                                            {#<input type="text" class="form-control">#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn blue">Enviar</button>
+                            <a class="btn default" href="{{ path('tienda.index') }}">Cancelar</a>
+                        </div>
+                        {{ form_end(form) }}
+                    </form>
+                </div>
+            </div>
+            <!-- END SAMPLE FORM PORTLET-->
+
+        </div>
+
+    </div>
+{% endblock %}

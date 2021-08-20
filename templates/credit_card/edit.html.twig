@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CreditCard{% endblock %}
+
+{% block body %}
+    <h1>Edit CreditCard</h1>
+
+    {{ include('credit_card/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('credit_card_index') }}">back to list</a>
+
+    {{ include('credit_card/_delete_form.html.twig') }}
+{% endblock %}

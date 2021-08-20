@@ -1,0 +1,111 @@
+{%extends('base.html.twig') %}
+
+{% block breadcrumbs %}
+<li>
+    Adicionar productos
+</li>
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="portlet box blue">
+                <div class="popover-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i> INSERTAR PRODUCTO
+                    </div>
+
+                    <div class="tools">
+                        <a href="" class="collapse">
+                        </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config">
+                        </a>
+                        <a href="" class="reload">
+                        </a>
+                        <a href="" class="remove">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <div class="form-body">
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <br>
+                        <button class="btn btn-sm blue-hoki">{{ button_label|default('Enviar') }}</button>
+                        <a class="btn btn-sm btn-danger" href="{{ path('tienda.index') }}">Cancelar</a>
+                        {{ form_end(form) }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {#<div class="row">
+        <div class="col-md-6">
+            <div class="portlet box blue">
+                <div class="popover-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i> INSERTAR PRODUCTO
+                    </div>
+
+                    <div class="tools">
+                        <a href="" class="collapse">
+                        </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config">
+                        </a>
+                        <a href="" class="reload">
+                        </a>
+                        <a href="" class="remove">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <form role="form">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <div class="input-group">
+											<span class="input-group-addon">
+											<i class="fa fa-envelope"></i>
+											</span>
+                                    <input type="text" class="form-control" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Left Icon</label>
+                                <div class="input-icon">
+                                    <i class="fa fa-bell-o"></i>
+                                    <input type="text" class="form-control" placeholder="Left icon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Left Icon(.input-sm)</label>
+                                <div class="input-icon input-icon-sm">
+                                    <i class="fa fa-bell-o"></i>
+                                    <input type="text" class="form-control input-sm" placeholder="Left icon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Left Icon(.input-lg)</label>
+                                <div class="input-icon input-icon-lg">
+                                    <i class="fa fa-bell-o"></i>
+                                    <input type="text" class="form-control input-lg" placeholder="Left icon">
+                                </div>
+                            </div>
+
+
+                            <br>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>#}
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends('base.html.twig') %}
+
+{% block title %}Detalles producto{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="portlet box blue">
+                <div class="popover-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i> DETALLES DEL PRODUCTO
+                    </div>
+
+                    <div class="tools">
+                        <a href="" class="collapse">
+                        </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config">
+                        </a>
+                        <a href="" class="reload">
+                        </a>
+                        <a href="" class="remove">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <div class="form-body">
+
+
+                        <div class="form-group">
+                            <label>Nombre del producto</label>
+                            <div class="input-icon">
+                                <i class="fa fa-bell-o"></i>
+                                <input type="text" class="form-control" placeholder="{{ producto.Name }}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Cantidad unitaria</label>
+                            <div class="input-icon">
+                                <i class="fa fa-bell-o"></i>
+                                <input type="text" class="form-control" placeholder="{{ producto.Cant }}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <div class="input-icon">
+                                <i class="fa fa-bell-o"></i>
+                                <input type="text" class="form-control" placeholder="{{ producto.Description }}" disabled>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    {{ include('product/_deleteProduct.html.twig') }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

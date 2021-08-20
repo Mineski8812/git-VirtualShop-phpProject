@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ClientCreditCard{% endblock %}
+
+{% block body %}
+    <h1>ClientCreditCard</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ client_credit_card.id }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ client_credit_card.Number }}</td>
+            </tr>
+            <tr>
+                <th>Client_id</th>
+                <td>{{ client_credit_card.clientId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('client_credit_card_index') }}">back to list</a>
+
+    <a href="{{ path('client_credit_card_edit', {'id': client_credit_card.id}) }}">edit</a>
+
+    {{ include('client_credit_card/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar producto{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="portlet box blue">
+                <div class="popover-title">
+                    <div class="caption">
+                        <i class="fa fa-gift"></i> Actualizar PRODUCTO
+                    </div>
+
+                    <div class="tools">
+                        <a href="" class="collapse">
+                        </a>
+                        <a href="#portlet-config" data-toggle="modal" class="config">
+                        </a>
+                        <a href="" class="reload">
+                        </a>
+                        <a href="" class="remove">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <div class="form-body">
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <br>
+                        <button class="btn btn-sm blue-hoki">{{ button_label|default('Actualizar') }}</button>
+                        {{ form_end(form) }}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
